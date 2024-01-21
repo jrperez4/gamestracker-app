@@ -1,7 +1,7 @@
-package app.springboot.gamestracker.service;
+package app.springboot.gamestracker.service.user;
 
 import app.springboot.gamestracker.dto.UserDto;
-import app.springboot.gamestracker.entity.User;
+import app.springboot.gamestracker.dto.entity.User;
 
 import java.util.List;
 

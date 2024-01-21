@@ -1,10 +1,9 @@
 package app.springboot.gamestracker.controller;
 
-import app.springboot.gamestracker.service.UserService;
+import app.springboot.gamestracker.service.user.UserService;
 import jakarta.validation.Valid;
 import app.springboot.gamestracker.dto.UserDto;
-import app.springboot.gamestracker.entity.User;
-import lombok.NoArgsConstructor;
+import app.springboot.gamestracker.dto.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.security.Principal;
 import java.util.List;
 
 @Controller
@@ -24,7 +24,16 @@ public class AuthController {
 
     // handler method to handle home page request
     @GetMapping("/index")
-    public String home() {
+    public String home(Model model, Principal principal) {
+        if (principal != null) {
+            // Usuario autenticado, pasa la información al modelo
+            model.addAttribute("authenticated", true);
+            model.addAttribute("username", principal.getName());
+        } else {
+            // Usuario no autenticado
+            model.addAttribute("authenticated", false);
+        }
+
         return "index";
     }
 

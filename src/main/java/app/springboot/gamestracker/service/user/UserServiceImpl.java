@@ -1,16 +1,15 @@
-package app.springboot.gamestracker.service;
+package app.springboot.gamestracker.service.user;
 
 import app.springboot.gamestracker.repository.RoleRepository;
 import app.springboot.gamestracker.repository.UserRepository;
 import app.springboot.gamestracker.dto.UserDto;
-import app.springboot.gamestracker.entity.Role;
-import app.springboot.gamestracker.entity.User;
+import app.springboot.gamestracker.dto.entity.Role;
+import app.springboot.gamestracker.dto.entity.User;
 import io.micrometer.common.util.StringUtils;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service

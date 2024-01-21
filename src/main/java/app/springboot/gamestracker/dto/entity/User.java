@@ -1,4 +1,4 @@
-package app.springboot.gamestracker.entity;
+package app.springboot.gamestracker.dto.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

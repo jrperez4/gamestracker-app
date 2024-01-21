@@ -1,8 +1,8 @@
 package app.springboot.gamestracker.security;
 
 import app.springboot.gamestracker.repository.UserRepository;
-import app.springboot.gamestracker.entity.Role;
-import app.springboot.gamestracker.entity.User;
+import app.springboot.gamestracker.dto.entity.Role;
+import app.springboot.gamestracker.dto.entity.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
